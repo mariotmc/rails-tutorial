@@ -1,0 +1,12 @@
+<%= link_to "Back", friends_path, class:"btn btn-dark" %>
+
+<div class="card" style="margin-top: 10px">
+  <h5 class="card-header"><%= @friend.first_name %><%= @friend.last_name %></h5>
+  <div class="card-body">
+    <p class="card-text"><%= @friend.email %> | <%= @friend.phone %> | <%= @friend.twitter %></p>
+    <div style="display: flex; gap: 10px">
+      <%= link_to "Edit", edit_friend_path(@friend), class:"btn btn-secondary" %>
+      <%= button_to "Delete", @friend, method: :delete, class:"btn btn-danger" %>
+    </div>
+  </div>
+</div>
